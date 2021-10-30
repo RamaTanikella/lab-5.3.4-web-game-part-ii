@@ -39,3 +39,27 @@ newImage('assets/well.png', 500, 575)
 newItem('assets/sword.png', 500, 555)
 newItem('assets/shield.png', 165, 335)
 newItem('assets/staff.png', 600, 250)
+
+function newItem(url, left, bottom){
+    let item = newImage(url, left, bottom)
+    item.addEventListener('click', function(){
+        console.log(item)
+    })
+}
+
+function newItem(url, left, bottom){
+    let item = newImage(url, left, bottom)
+    item.addEventListener('click', function(){
+        item.remove()
+    })
+}
+
+function newItem(url, left, bottom){
+    let item = newImage(url, left, bottom)
+    item.addEventListener('click', function(){
+        item.remove()
+        let inventoryItem = document.createElement('img')
+        inventoryItem.src = url
+        inventory.append(inventoryItem)
+    })
+}
